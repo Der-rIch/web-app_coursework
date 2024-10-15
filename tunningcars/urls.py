@@ -19,6 +19,6 @@ from catalog import views
  
 urlpatterns = [
     path('', views.index),
-    path('about/', views.about),
+    path('about/', views.about, kwargs={"name":"Vass", "age": 38}),
     path('contact/', views.contact),
 ]
