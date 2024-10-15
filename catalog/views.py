@@ -8,5 +8,5 @@ def about(request, name, age):
             <p>Имя: {name}</p>
             <p>Возраст: {age}</p>
     """)
-def contact(request):
+def contact(request, ):
     return HttpResponse("<h3>Контакты<h3>")    
