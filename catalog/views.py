@@ -2,7 +2,7 @@ from django.http import HttpResponse
   
 def index(request):
     return HttpResponse("Главное")
-def index(request):
+def about(request):
     return HttpResponse("О сайте")
-def index(request):
+def contact(request):
     return HttpResponse("Контакты")    
