@@ -1,12 +1,13 @@
 from django.http import HttpResponse
   
 def index(request):
-    return HttpResponse("<h3>Главное<h3>")
-def about(request, name, age):
+    return HttpResponse("<h3>Главная страниа<h3>")
+def user(request, name ="Undefinded", age =0):
     return HttpResponse(f"""
-            <h3>О челике</h3>
-            <p>Имя: {name}</p>
-            <p>Возраст: {age}</p>
+    <h3>информация о клиенте</h3>
+    <h2>Имя: {name} Возраст: {age}</h2>"
     """)
-def contact(request, ):
+def products(request):
+    return HttpResponse("Список услуг")
+def contact(request):
     return HttpResponse("<h3>Контакты<h3>")    
