@@ -3,6 +3,6 @@ from django.contrib.auth.models import User
 
 class Orders(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    # user_car = models.ForeignKey(..., on_delete=models.CASCADE)
-    # tunning = models.ForeignKey(..., on_delete=models.CASCADE)
+    user_car = models.ForeignKey(Car, on_delete=models.CASCADE)
+    tunning = models.ForeignKey(Tunning, on_delete=models.CASCADE)
 
