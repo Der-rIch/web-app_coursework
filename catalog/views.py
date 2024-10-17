@@ -4,8 +4,6 @@ from tunning.models import Tunning
 
   
 def index(request):
-    latest_tunning_list = Tunning.objects.all()[:5]
-    output = ", "
     return HttpResponse(f"""
     <h3>Главная страниа</h3>
     <h4>типо инфа</h4>
