@@ -16,7 +16,7 @@ class Color(models.Model):
 class Tunning(models.Model):
     discipline = models.ForeignKey(Discipline, on_delete=models.CASCADE)
     style = models.ForeignKey(Style, on_delete=models.CASCADE)
-    body_color = models.ForeignKey(Color, on_delete=models.CASCADE)
-    disk_color = models.ForeignKey(Color, on_delete=models.CASCADE)
-    interer_color = models.ForeignKey(Color, on_delete=models.CASCADE)
+    body_color = models.ForeignKey(Color, related_name="body_color", on_delete=models.CASCADE)
+    disk_color = models.ForeignKey(Color, related_name="disk_color", on_delete=models.CASCADE)
+    interer_color = models.ForeignKey(Color, related_name="interer_color", on_delete=models.CASCADE)
 

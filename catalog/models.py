@@ -1,4 +1,6 @@
 from django.db import models
+from car.models import Car
+from tunning.models import Tunning
 from django.contrib.auth.models import User
 
 class Orders(models.Model):
