@@ -7,7 +7,7 @@ class Body(models.Model):
         return self.name
 
 class Car(models.Model):
-    mark = models.CharField(max_length=30)
+    mark = models.CharField(max_length=50)
     name = models.CharField(max_length=50)
     yom = models.IntegerField()
     body = models.ForeignKey(Body, on_delete=models.CASCADE)
