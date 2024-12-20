@@ -1,0 +1,15 @@
+{% extends 'car/base.html' %}
+{% block content %}
+    <h2>Список заказов</h2>
+    <br>
+    {% for order_item in orders %}
+        <div class="post">
+            <h3><a href="{% url 'order_detail' pk=order_item.pk %}">{{ order_item.order_name }}</a></h3>
+            <p>{{ order_item.order_user_fio }}, {{ order_item.order_user_contact }}</p>
+            <div class="date">
+                {{ order_item.order_create_date }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+

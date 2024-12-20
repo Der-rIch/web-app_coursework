@@ -1,0 +1,36 @@
+{% extends 'car/base.html' %}
+
+{% block content %}
+    {% if form.order_id > 0 %}
+	<h3>Редактирование заказа на тюнинг</h3>
+    {% else %}
+        <h3>Новый заказ на тюнинг</h3>
+    {% endif %}
+
+    <form method="POST" class="post-form">
+	{% csrf_token %}
+
+	<div class="container mt-6">
+		<div class="card bg-light">
+			<article class="card-body mx-auto" style="max-width: 400px;">
+				<h3 class="card-title mt-3 text-left">Детализация заказа на тюнинг</h3>
+
+				{{ form.as_p }}
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-outline-success btn-block">
+						{% if form.order_id > 0 %}
+							Изменить заказ
+						{% else %}
+							Сохранить заказ
+						{% endif %}
+					</button>
+				</div>
+				
+
+			</article>
+		</div>
+	</div>
+
+    </form>
+{% endblock %}

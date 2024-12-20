@@ -1,0 +1,5 @@
+cd py_project
+py_project>python3 -m venv myvenv (если не отработала следующая команда)
+py_project>myvenv\Scripts\activate
+py_project>python manage.py runserver
+pip install -r requirements.txt

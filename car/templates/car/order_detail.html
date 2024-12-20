@@ -1,0 +1,13 @@
+{% extends 'car/base.html' %}
+
+{% block content %}
+    <div class="post">
+        <h3>Номер заказа: {{ order.order_name }}</h3>
+        <p>ФИО заказчика: {{ order.order_user_fio }}</p>
+        <p>Контакты заказчика: {{ order.order_user_contact }}</p>
+        <p>Дата/время создания заказа: {{ order.order_create_date }}</p>
+        <a class="btn btn-default" href="{% url 'order_edit' pk=order.pk %}">
+            <span class="glyphicon glyphicon-pencil"></span>
+        </a>
+    </div>
+{% endblock %}
